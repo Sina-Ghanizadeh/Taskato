@@ -1,0 +1,82 @@
+﻿@model Taskato.Models.ViewModels.UpsertViewModel
+
+@{
+    var title  = "Create Task";
+}
+
+<form method="post">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Tasks.Id" />
+        @if (Model.Tasks != null)
+        {
+            //edit
+            title = "Edit Task";
+        }
+        <div class="col-12 border-bottom">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-8 pt-4">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tasks.Name"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tasks.Name" class="form-control" />
+                    <span asp-validation-for="Tasks.Name" class="text-danger"></span>
+                </div>
+            </div>
+           
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tasks.TaskDate"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tasks.TaskDate" class="form-control" />
+                    <span asp-validation-for="Tasks.TaskDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label asp-for="Tasks.Description"></label>
+                </div>
+                <div class="col-8">
+                    <input asp-for="Tasks.Description" class="form-control" />
+                    <span asp-validation-for="Tasks.Description" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Priority</label>
+                </div>
+                <div class="col-8">
+                    @Html.DropDownListFor(u => u.Tasks.PriorityId, Model.Priority, "--Priority--",
+                        new { @class = "form-control" })
+                    <span asp-validation-for="Tasks.PriorityId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4 offset-4 ">
+                    @if (Model.Tasks == null)
+                    {
+                        <button type="submit" class="btn btn-primary form-control">Create</button>
+                    }
+                    else
+                    {
+                        <button type="submit" class="btn btn-primary form-control">Update</button>
+                    }
+                </div>
+                <div class="col-4">
+                    <a asp-action="Index" class="btn btn-success form-control">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+
+}

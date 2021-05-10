@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taskato", "Taskato\Taskato.csproj", "{800AE40D-9450-43CA-9707-0475AD6AF587}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{800AE40D-9450-43CA-9707-0475AD6AF587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{800AE40D-9450-43CA-9707-0475AD6AF587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{800AE40D-9450-43CA-9707-0475AD6AF587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{800AE40D-9450-43CA-9707-0475AD6AF587}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15588914-49F1-4230-BCDB-C04FC48FB989}
+	EndGlobalSection
+EndGlobal
